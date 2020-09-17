@@ -12,7 +12,11 @@ app.use(bodyParser.json());
 
 
 // Rutas
-
+app.get('/', (req,res) => {
+    res.status(200).send(
+        '<h3>Home</h3>'
+    );
+});
 
 // Exportar
 module.exports = app
