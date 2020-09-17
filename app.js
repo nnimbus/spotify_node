@@ -1,7 +1,9 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 
+var rutas = require('./rutas/api_rutas')
 var app = express()
+
     // Cargar archivos de rutas
 
 // Middlewares
@@ -12,11 +14,8 @@ app.use(bodyParser.json());
 
 
 // Rutas
-app.get('/', (req,res) => {
-    res.status(200).send(
-        '<h3>Home</h3>'
-    );
-});
+app.use('/api', rutas)
+app.use(express.static('./templates'))
 
 // Exportar
 module.exports = app
