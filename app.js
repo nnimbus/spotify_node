@@ -1,10 +1,15 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 
+
 var rutas = require('./rutas/api_rutas')
 var app = express()
 
-    // Cargar archivos de rutas
+
+
+
+
+// Cargar archivos de rutas
 
 // Middlewares
 app.use(bodyParser.urlencoded({ extended: false }));
