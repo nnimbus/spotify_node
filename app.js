@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 // Rutas
 app.use('/api', rutas)
-app.use(express.static('./templates'))
+app.use(express.static('./public'))
 
 // Exportar
 module.exports = app
